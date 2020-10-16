@@ -43,7 +43,19 @@
                 <p>Loan Amount: <input type="number" id="amountLoan" placeholder="Loan" /></p>
             </div>
             <div class="col">
+
                 <p>Term (Months): <input type="number" id="monthsLoan" placeholder="Months" /></p>
+                <form>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">15 years</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">20 years</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio" disabled>30 years</label>
+                    </div>
+                </form>
             </div>
             <div class="col">
                 <p>Interest Rate: <input type="number" min="2" max="7" step=".1" id="rateLoan" placeholder="Interest" /></p>
