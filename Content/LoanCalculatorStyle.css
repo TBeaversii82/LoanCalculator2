@@ -39,6 +39,7 @@ body {
     box-shadow: 5px 10px black;
 }
 
+<<<<<<< Updated upstream
 *{
 <div class="container container-fluid" >
 <div class="row" >
@@ -245,11 +246,42 @@ body {
 
 </div >
 </div >
+=======
+/*optional table css*/
+#table-wrapper {
+    position: relative;
+}
+>>>>>>> Stashed changes
 
+#table-scroll {
+    height: 150px;
+    overflow: auto;
+    margin-top: 20px;
+}
 
+<<<<<<< Updated upstream
 <br / >
     }
 
+=======
+#table-wrapper table {
+    width: 100%;
+}
+>>>>>>> Stashed changes
+
+    #table-wrapper table * {
+        background: yellow;
+        color: black;
+    }
+
+    #table-wrapper table thead th .text {
+        position: absolute;
+        top: -20px;
+        z-index: 2;
+        height: 20px;
+        width: 35%;
+        border: 1px solid red;
+    }
 
 
 
