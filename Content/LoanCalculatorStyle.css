@@ -1,9 +1,15 @@
 ﻿
+body {
+    background-image: url('Img/metal.jpeg');
+}
+
+
 * {
     min-height: 50px;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
 }
+
 
 .color1 {
     background-color: darkgray;
@@ -16,7 +22,8 @@
 }
 
 .col {
-    outline: 4px solid black;
+    outline: 1px solid black;
+    box-shadow: 5px 10px;
 }
 
 .medH {
@@ -27,79 +34,221 @@
     min-height: 200px;
 }
 
+.table {
+    outline: 1px solid black;
+    box-shadow: 5px 10px black;
+}
 
-
-*{
+{
 <div class="container container-fluid" >
 <div class="row" >
 <div class="col-5" >
 <div class="col color1" >
 <div class="tallH" >
+<h2 > Mortgage Loan Calculator</h2 >
+<br / >
+<input class="form-control form-control-sm" type="text" placeholder="Loan Amount" >
+<br / >
+<input class="form-control form-control-sm" type="text" placeholder="Term(Months)" >
+<br / >
+<input class="form-control form-control-sm" type="text" placeholder="Intrest Rate" >
+<br / >
+<button type="button" class="form-control btn-primary" > Calculate</button >
+<br / >
 </div >
 </div >
 </div >
 <div class="col-7" >
 <div class="col color1" >
 <div class="tallH" >
-
+<br / >
+<input class="form-control form-control-xlg" type="text" placeholder="Your Monthly Payments" >
+<br / >
+<input class="form-control form-control-xlg" type="text" placeholder="Total Principal" >
+<br / >
+<input class="form-control form-control-xlg" type="text" placeholder="Total Intrest" >
+<br / >
+<input class="form-control form-control-xlg" type="text" placeholder="Total Cost" >
+<br / >
+<button type="button" class="form-control btn-warning" > Clear</button >
+<br / >
+</div >
 </div >
 </div >
 </div >
 </div >
 <br / >
+<div class=" container container-fluid" >
 <div class="row" >
-<table class="col-2 table table-striped table-dark" >
-<tr > <td > result1</td > </tr >
-<tr > <td > result2</td > </tr >
-<tr > <td > result3</td > </tr >
-<tr > <td > result4</td > </tr >
-<tr > <td > result5</td > </tr >
+
+<table class="table table-hover table table-bordered table-striped table-dark mb-0" id="results" >
+
+<thead >
+
+<tr >
+
+<th scope="col" > Months</th >
+
+<th scope="col" > Payment</th >
+
+<th scope="col" > Principal</th >
+
+<th scope="col" > Interest</th >
+
+<th scope="col" > Total Interest</th >
+
+<th scope="col" > Balance</th >
+
+</tr >
+
+</thead >
+
+<tbody >
+
+
+
+<tr >
+
+<th scope="row" > 1</th >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+</tr >
+
+<tr >
+
+<th scope="row" > 2</th >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+</tr >
+
+<tr >
+
+<th scope="row" > 3</th >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+</tr >
+
+<tr >
+
+<th scope="row" > 4</th >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+</tr >
+
+<tr >
+
+<th scope="row" > 5</th >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+</tr >
+
+<tr >
+
+<th scope="row" > 6</th >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+</tr >
+
+<tr >
+
+<th scope="row" > 7</th >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+</tr >
+
+
+
+<tr >
+
+<th scope="row" > 8</th >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+<td > </td >
+
+</tr >
+
+</tbody >
+
 </table >
 
-<table class="col-2 table table-striped table-dark" >
-<tr > <td > result1</td > </tr >
-<tr > <td > result2</td > </tr >
-<tr > <td > result3</td > </tr >
-<tr > <td > result4</td > </tr >
-<tr > <td > result5</td > </tr >
-</table >
-
-<table class="col-2 table table-striped table-dark" >
-<tr > <td > result1</td > </tr >
-<tr > <td > result2</td > </tr >
-<tr > <td > result3</td > </tr >
-<tr > <td > result4</td > </tr >
-<tr > <td > result5</td > </tr >
-</table >
-
-<table class="col-2 table table-striped table-dark" >
-<tr > <td > result1</td > </tr >
-<tr > <td > result2</td > </tr >
-<tr > <td > result3</td > </tr >
-<tr > <td > result4</td > </tr >
-<tr > <td > result5</td > </tr >
-</table >
-
-<table class="col-2 table table-striped table-dark" >
-<tr > <td > result1</td > </tr >
-<tr > <td > result2</td > </tr >
-<tr > <td > result3</td > </tr >
-<tr > <td > result4</td > </tr >
-<tr > <td > result5</td > </tr >
-</table >
-
-<table class="col-2 table table-striped table-dark" >
-<tr > <td > result1</td > </tr >
-<tr > <td > result2</td > </tr >
-<tr > <td > result3</td > </tr >
-<tr > <td > result4</td > </tr >
-<tr > <td > result5</td > </tr >
-</table >
 
 
 </div >
 </div >
 
-<script src="Scripts/jquery-3.5.1.min.js" > </script >
-<script src="Scripts/bootstrap.min.js" > </script >
+
+<br / >
 }
+
+
+
