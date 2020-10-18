@@ -43,7 +43,7 @@
     for (i = 0; i < months && balance > 0; i++) {
         intRate += parseFloat(balance * (monthly));
         array[i] = new Array();
-        array[i][0] = (i + 1).toFixed(2);
+        array[i][0] = (i + 1).toFixed(0);//makes the array start from 1 to the length of the array. set to 0 so that the months are "1" instead of "1.0" etc
         array[i][1] = parseFloat(monthlyPayment).toFixed(2);
         array[i][2] = parseFloat(monthlyPayment - (balance * (monthly))).toFixed(2);
         array[i][3] = parseFloat(balance * (monthly)).toFixed(2);
