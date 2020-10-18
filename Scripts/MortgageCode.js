@@ -43,13 +43,6 @@ function loanResults() {
     document.getElementById("remainBalance").innerHTML = "$" + rBalance;
     document.getElementById("princialPayment").innerHTML = "$" + prinPayment;
 
-
-    
-    //console.log(amount, months, interest);
-    return;
-}
-
-function table() {
     let table = document.getElementById("results");
     let row = table.insertRow(9);
     let cell1 = row.insertCell(0);
@@ -59,26 +52,37 @@ function table() {
     let cell5 = row.insertCell(4);
     let cell6 = row.insertCell(5);
 
-    cell1.innerHTML = " ";
-    cell2.innerHTML = " ";
-    cell3.innerHTML = " ";
-    cell4.innerHTML = " ";
-    cell5.innerHTML = " ";
-    cell6.innerHTML = " ";
-
-    document.getElementById("mPayments").innerHTML = "$" + monthlyPayment;
-    document.getElementById("iRPayments").innerHTML = "$" + totalInterest;
-    document.getElementById("Payments").innerHTML = "$" + totalPayment
-    document.getElementById("remainBalance").innerHTML = "$" + rBalance;
-    document.getElementById("princialPayment").innerHTML = "$" + prinPayment;
+    cell1.innerHTML = monthlyPayment;
+    cell2.innerHTML = totalInterest;
+    cell3.innerHTML = totalPayment
+    cell4.innerHTML = rBalance;
+    cell5.innerHTML = prinPayment;
+    //cell6.innerHTML = ;
     
+    //console.log(amount, months, interest);
+    return;
+}
+
+function table() {
+
+
+
+
+
     //console.log(amount, months, interest);
 }
 
-//function summary() {
-//   
-//    console.log(amount, months, interest);
-//}
+   
+
+
+function summary() {
+
+    let amount = document.getElementById("amountLoan").value;
+    let months = document.getElementById("monthsLoan").value;
+    let interest = document.getElementById("rateLoan").value;
+
+    console.log(amount, months, interest);
+}
 
 function reset() {
     document.getElementById("amountLoan").value = "";
