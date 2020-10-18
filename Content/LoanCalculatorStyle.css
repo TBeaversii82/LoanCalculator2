@@ -1,6 +1,6 @@
 ﻿
 body {
-    background-image: url('Img/metal.jpeg');
+    background-image: url('../Images/metal3.png');
 }
 
 
@@ -39,7 +39,7 @@ body {
     box-shadow: 5px 10px black;
 }
 
-{
+*{
 <div class="container container-fluid" >
 <div class="row" >
 <div class="col-5" >
@@ -248,7 +248,8 @@ body {
 
 
 <br / >
-}
+    }
+
 
 
 
