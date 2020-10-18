@@ -1,6 +1,6 @@
 ﻿
 body {
-    background-image: url('Img/metal.jpeg');
+    background-image: url('../Images/Calculator2-bg.png');
 }
 
 
@@ -40,7 +40,7 @@ body {
 }
 
 {
-<div class="container container-fluid" >
+<div class="container" >
 <div class="row" >
 <div class="col-5" >
 <div class="col color1" >
