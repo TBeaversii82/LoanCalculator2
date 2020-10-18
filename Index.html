@@ -47,18 +47,16 @@
                 <p>Term (Months): <input type="number" id="monthsLoan" placeholder="Months" /></p>
             </div>
             <div class="col">
-                <p>Interest Rate: <input type="number" min="2" max="7" id="rateLoan" placeholder="Interest" /></p>
+                <p>Interest Rate: <input type="number" min="2" max="8" id="rateLoan" placeholder="Interest" /></p>
             </div>
         </div>
         <!--Calculate Button-->
         <div class="row">
             <div class="col">
-                <!--; summary()-->
                 <button class="btn btn-primary" id="loan" onclick=" loanResults()">Calculate</button>
             </div>
             <!--Reset Button-->
             <div class="col">
-
                 <button class="btn btn-warning" id="clear" onclick="reset()">Clear</button>
             </div>
         </div>
@@ -94,99 +92,90 @@
             </div>
         </div>
     </div>
-    <div class="table-wrapper-scroll-y my-custom-scrollbar">
-
-
+    <!--Results for table-->
+    <div>
         <table class="table table-bordered table-striped mb-0 table-hover" id="results">
-            <thead>
-                <tr class="hover">
-                    <th scope="col">Months</th>
-                    <th scope="col">Payment</th>
-                    <th scope="col">Principal</th>
-                    <th scope="col">Interest</th>
-                    <th scope="col">Total Interest</th>
-                    <th scope="col">Balance</th>
-                </tr>
-            </thead>
-            <tbody>
-
-
-
-                <tr>
-                    <th scope="row">1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-
-
-                <tr>
-                    <th scope="row">8</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
+                <thead>
+                    <tr class="hover">
+                        <th scope="col">Months</th>
+                        <th scope="col">Payment</th>
+                        <th scope="col">Principal</th>
+                        <th scope="col">Interest</th>
+                        <th scope="col">Total Interest</th>
+                        <th scope="col">Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
         </table>
-
-
-
     </div>
 
 
+<<<<<<< Updated upstream
 
     <!--Bootstrap-->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -195,6 +184,15 @@
     <script src="Scripts/bootstrap.bundle.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="/Scripts/MortgageCode.js"></script>
+=======
+        <!--Bootstrap-->
+        <!--<script src="Scripts/bootstrap.bundle.min.js"></script>
+        <script src="Scripts/bootstrap.bundle.js"></script>
+        <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
+        <script src="/Scripts/MortgageCode.js"></script>
+>>>>>>> Stashed changes
 
 </body>
 </html>
