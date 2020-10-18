@@ -1,0 +1,105 @@
+﻿
+* {
+    min-height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.color1 {
+    background-color: darkgray;
+}
+
+
+.container {
+    margin-top: 25px;
+    border: 10px black;
+}
+
+.col {
+    outline: 4px solid black;
+}
+
+.medH {
+    min-height: 100px;
+}
+
+.tallH {
+    min-height: 200px;
+}
+
+
+
+*{
+<div class="container container-fluid" >
+<div class="row" >
+<div class="col-5" >
+<div class="col color1" >
+<div class="tallH" >
+</div >
+</div >
+</div >
+<div class="col-7" >
+<div class="col color1" >
+<div class="tallH" >
+
+</div >
+</div >
+</div >
+</div >
+<br / >
+<div class="row" >
+<table class="col-2 table table-striped table-dark" >
+<tr > <td > result1</td > </tr >
+<tr > <td > result2</td > </tr >
+<tr > <td > result3</td > </tr >
+<tr > <td > result4</td > </tr >
+<tr > <td > result5</td > </tr >
+</table >
+
+<table class="col-2 table table-striped table-dark" >
+<tr > <td > result1</td > </tr >
+<tr > <td > result2</td > </tr >
+<tr > <td > result3</td > </tr >
+<tr > <td > result4</td > </tr >
+<tr > <td > result5</td > </tr >
+</table >
+
+<table class="col-2 table table-striped table-dark" >
+<tr > <td > result1</td > </tr >
+<tr > <td > result2</td > </tr >
+<tr > <td > result3</td > </tr >
+<tr > <td > result4</td > </tr >
+<tr > <td > result5</td > </tr >
+</table >
+
+<table class="col-2 table table-striped table-dark" >
+<tr > <td > result1</td > </tr >
+<tr > <td > result2</td > </tr >
+<tr > <td > result3</td > </tr >
+<tr > <td > result4</td > </tr >
+<tr > <td > result5</td > </tr >
+</table >
+
+<table class="col-2 table table-striped table-dark" >
+<tr > <td > result1</td > </tr >
+<tr > <td > result2</td > </tr >
+<tr > <td > result3</td > </tr >
+<tr > <td > result4</td > </tr >
+<tr > <td > result5</td > </tr >
+</table >
+
+<table class="col-2 table table-striped table-dark" >
+<tr > <td > result1</td > </tr >
+<tr > <td > result2</td > </tr >
+<tr > <td > result3</td > </tr >
+<tr > <td > result4</td > </tr >
+<tr > <td > result5</td > </tr >
+</table >
+
+
+</div >
+</div >
+
+<script src="Scripts/jquery-3.5.1.min.js" > </script >
+<script src="Scripts/bootstrap.min.js" > </script >
+}
