@@ -50,13 +50,27 @@ function loanResults() {
 }
 
 function table() {
-    var table = document.getElementById("results");
-    var row = table.insertRow(0);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
+    let table = document.getElementById("results");
+    let row = table.insertRow(9);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+    let cell4 = row.insertCell(3);
+    let cell5 = row.insertCell(4);
+    let cell6 = row.insertCell(5);
 
     cell1.innerHTML = " ";
     cell2.innerHTML = " ";
+    cell3.innerHTML = " ";
+    cell4.innerHTML = " ";
+    cell5.innerHTML = " ";
+    cell6.innerHTML = " ";
+
+    document.getElementById("mPayments").innerHTML = "$" + monthlyPayment;
+    document.getElementById("iRPayments").innerHTML = "$" + totalInterest;
+    document.getElementById("Payments").innerHTML = "$" + totalPayment
+    document.getElementById("remainBalance").innerHTML = "$" + rBalance;
+    document.getElementById("princialPayment").innerHTML = "$" + prinPayment;
     
     //console.log(amount, months, interest);
 }
