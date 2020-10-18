@@ -72,29 +72,7 @@
     return;
 }
 
-
-
-    
-    //console.log(amount, months, interest);
-    //return;
-
-
-
-
-
-
-
-
-
-//function summary() {
-
-//    let amount = document.getElementById("amountLoan").value;
-//    let months = document.getElementById("monthsLoan").value;
-//    let interest = document.getElementById("rateLoan").value;
-
-//    console.log(amount, months, interest);
-//}
-
+//Clear button function
 function reset() {
     document.getElementById("amountLoan").value = "";
     document.getElementById("monthsLoan").value = "";
