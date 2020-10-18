@@ -35,35 +35,35 @@
     document.getElementById("remainBalance").innerHTML = "$" + rBalance;
     document.getElementById("princialPayment").innerHTML = "$" + prinPayment;
 
-    
+    //new array created 
     var intRate = 0;
     let balance = principal;
-    //create new array 
-    let array = new Array();
+    //itirates through the array that is set 
+    let array = new Array();//stores new array length
     for (i = 0; i < months && balance > 0; i++) {
-        intRate += parseFloat(balance * (monthly));
+        intRate += parseFloat(balance * (monthly));//adds interest to the result of the right side
         array[i] = new Array();
         array[i][0] = (i + 1).toFixed(0);//makes the array start from 1 to the length of the array. set to 0 so that the months are "1" instead of "1.0" etc
-        array[i][1] = parseFloat(monthlyPayment).toFixed(2);
-        array[i][2] = parseFloat(monthlyPayment - (balance * (monthly))).toFixed(2);
-        array[i][3] = parseFloat(balance * (monthly)).toFixed(2);
-        array[i][4] = parseFloat(intRate).toFixed(2);
-        array[i][5] = parseFloat(balance - monthlyPayment).toFixed(2);
+        array[i][1] = parseFloat(monthlyPayment).toFixed(2);//monthly payment
+        array[i][2] = parseFloat(monthlyPayment - (balance * (monthly))).toFixed(2);//has balance and monthly values
+        array[i][3] = parseFloat(balance * monthly).toFixed(2);//principal
+        array[i][4] = parseFloat(intRate).toFixed(2);//interset rate
+        array[i][5] = parseFloat(balance - monthlyPayment).toFixed(2);//balance
         if (monthlyPayment > balance) {
-            array[i][1] = array[i - 1][5];
-            array[i][2] = array[i][1] - array[i][3];
-            array[i][5] = 0.00;
+            array[i][1] = array[i - 1][5];//col two
+            array[i][2] = array[i][1] - array[i][3]; //monthlyPayments - principal
+            array[i][5] = 0.00;//end of the table for balance equals 0
         }
-        balance -= parseFloat(monthlyPayment).toFixed(2);
+        balance -= parseFloat(monthlyPayment).toFixed(2);//balance 
 
 
     }
     //takes the id and creates a new row in the table
     var table = document.getElementById("results").getElementsByTagName("tbody")[0];
     for (let j = 0; table.rows.length > 0; j++) {
-        table.deleteRow(-1);//deletes the last roww in the table
+        table.deleteRow(-1);//deletes the last row in the table
     }
-    //
+    //total months and output that need to be in the table
     for (let i = 0; i < months; i++) {
         let newRow = table.insertRow();
         var myTable = `<td>${(array[i][0])}</td><td>${(array[i][1])}</td><td>${(array[i][2])}</td><td>${(array[i][3])}</td><td>${(array[i][4])}</td><td>${(array[i][5])}</td>`;
