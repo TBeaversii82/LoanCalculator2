@@ -70,7 +70,7 @@ body {
 <br / >
 <input class="form-control form-control-xlg" type="text" placeholder="Total Cost" >
 <br / >
-<button type="button" class="form-control btn-dager" > Clear</button >
+<button type="button" class="form-control btn-danger" > Clear</button >
 <br / >
 </div >
 </div >

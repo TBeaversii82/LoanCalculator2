@@ -68,4 +68,9 @@ function reset() {
     document.getElementById("amountLoan").value = "";
     document.getElementById("monthsLoan").value = "";
     document.getElementById("rateLoan").value = "";
+    document.getElementById("mPayments").value = "";
+    document.getElementById("princialPayment").value = "";
+    document.getElementById("iRPayments").value = "";
+    document.getElementById("Payments").value = "";
+
 }
