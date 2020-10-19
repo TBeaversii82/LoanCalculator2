@@ -63,3 +63,9 @@
     }
     return; 
 }
+//Clear button function
+function reset() {
+    document.getElementById("amountLoan").value = "";
+    document.getElementById("monthsLoan").value = "";
+    document.getElementById("rateLoan").value = "";
+}
