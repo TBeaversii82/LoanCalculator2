@@ -13,61 +13,7 @@
     <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
     <link href="Content/LoanCalculatorStyle.css" rel="stylesheet" />
 
-    <style>
-        body {
-            background-image: url('/Images/metal3.png');
-        }
-
-
-
-
-        * {
-            min-height: 50px;
-            text-align: left;
-            font-weight: bold;
-        }
-
-
-
-
-        .color1 {
-            background-color: darkgray;
-        }
-
-
-
-
-        .container {
-            margin-top: 25px;
-            border: 10px black;
-        }
-
-
-
-        .col {
-            outline: 1px solid black;
-            box-shadow: 5px 10px;
-        }
-
-
-
-        .medH {
-            min-height: 100px;
-        }
-
-
-
-        .tallH {
-            min-height: 200px;
-        }
-
-
-
-        .table {
-            outline: 1px solid black;
-            box-shadow: 5px 10px black;
-        }
-    </style>
+   
 </head>
 <body>
         <div class="container container-fluid">
@@ -93,16 +39,21 @@
                 <div class="col-7">
                     <div class="col color1">
                         <div class="tallH">
+                            <h2 class="text-center">Summary</h2>
                             <br />
+                            Monthly Payments
                             <!--<input class="form-control form-control-xlg" type="text" id="mPayments" placeholder="Your Monthly Payments">-->
                             <p id="mPayments" input class="form-control form control-xlg" placeholder-="Your Monthly Payment"> Monthly Payments: </p>
                             <br />
+                            Total Principal:
                             <!--<input class="form-control form-control-xlg" type="text" placeholder="Total Principal">-->
                             <p id="princialPayment" input class="form-control form control-xlg" placeholder="Total Principal"> Total Principal: </p>
                             <br />
+                            Total Intrest Paid:
                             <!--<input class="form-control form-control-xlg" type="text" placeholder="Total Intrest">-->
                             <p id="iRPayments" input class="form-control form-control-xlg" type="text" placeholder="Total Intrest"> Total Intrest Paid </p>
                             <br />
+                            Total Cost:
                             <!--<input class="form-control form-control-xlg" type="text" placeholder="Total Cost">-->
                             <p id="Payments" input class="form-control form-control-xlg" type="text" placeholder="Total Cost"> Total Cost: </p>
                             <br />

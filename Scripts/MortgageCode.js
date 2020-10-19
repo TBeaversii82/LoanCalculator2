@@ -29,36 +29,44 @@ function loanResults() {
     //Compute Principal Payment
     let prinPayment = (totalPayment - monthlyPayment).toFixed(2);
 
-    ////Balance
-    let rBalance = (amount - monthlyPayment).toFixed(2);
+    //////Balance
+    //let rBalance = (amount - monthlyPayment).toFixed(2);
 
     //Show Summary Results
     document.getElementById("mPayments").innerHTML = "$" + monthlyPayment;
     document.getElementById("iRPayments").innerHTML = "$" + totalInterest;
-    document.getElementById("Payments").innerHTML = "$" + totalPayment
+    document.getElementById("Payments").innerHTML = "$" + totalPayment;
     //document.getElementById("remainBalance").innerHTML = "$" + rBalance;
     document.getElementById("princialPayment").innerHTML = "$" + prinPayment;
     
     //new array created 
     let intRate = 0;
-    let loanBalance = parseFloat(amount);
+    let loanBalance = totalPayment;
+    let newPrincipal = principal;//princial ballance will change 
+    let newInterestAmount = 0;
     //iterates through the array that is set
     let array = new Array();//stores new array length
-    for (let i = 0; i < months && loanBalance > 0; i++) {
-        intRate += parseFloat(loanBalance * monthlyPayment).toFixed(2);//adds interest to the result of the right side
+    for (let i = 0; i < months && totalPayment > 0; i++) {
+        newInterestAmount = calculateInterest * newPrincipal;
+        newPrincipal = newPrincipal - (monthlyPayment - newInterestAmount);
+        //intRate += parseFloat(loanBalance * monthlyPayment).toFixed(2);//adds interest to the result of the right side
+        loanBalance -= monthly;
+        intRate += newInterestAmount;//adds interest to the result of the right side
         array[i] = new Array();
-        array[i][0] = (i + 1).toFixed(0);//makes the array start from 1 to the length of the array. set to 0 so that the months are "1" instead of "1.0" etc
-        array[i][1] = parseFloat(months).toFixed(2);//monthly payment
-        array[i][2] = parseFloat(months - (loanBalance * monthlyPayment)).toFixed(2);//has balance and monthly values
-        array[i][3] = parseFloat(loanBalance * monthlyPayment).toFixed(2);//interset rate
+        array[i][0] = (i + 1).toFixed(0);//month makes the array start from 1 to the length of the array. set to 0 so that the months are "1" instead of "1.0" etc
+        array[i][1] = parseFloat(monthly).toFixed(2);//monthly payment
+        //array[i][2] = parseFloat(months - (loanBalance * monthlyPayment)).toFixed(2);//has balance and monthly values
+        array[i][2] = i == months - 1 ? 0.00 : newPrincipal.toFixed(2);//has balance and monthly values
+        //array[i][3] = parseFloat(loanBalance * monthlyPayment).toFixed(2);//interset rate
+        array[i][3] = i == months - 1 ? 0.00 : newInterestAmount.toFixed(2);//interset rate
         array[i][4] = parseFloat(intRate).toFixed(2);// total interset rate
-        array[i][5] = parseFloat(loanBalance - months).toFixed(2);//balance
-        if (months > loanBalance) {
-            array[i][1] = array[i - 1][5];//col two
-            array[i][2] = array[i][1] - array[i][3]; //monthlyPayments - principal
-            array[i][5] = 0.00;//end of the table for balance equals 0
-        }
-        loanBalance -= parseFloat(monthlyPayment).toFixed(2);//balance 
+        array[i][5] = i == months - 1 ? 0.00 : parseFloat(loanBalance).toFixed(2);//balance
+        //if (months > loanBalance) {
+        //    array[i][1] = array[i - 1][5];//col two
+        //    array[i][2] = array[i][1] - array[i][3]; //monthlyPayments - principal
+        //    array[i][5] = 0.00;//end of the table for balance equals 0
+        //}
+        //loanBalance -= parseFloat(monthlyPayment).toFixed(2);//balance 
 
 
     }
