@@ -1,8 +1,6 @@
-﻿
-body {
+﻿body {
     background-image: url('../Images/metal3.png');
 }
-
 
 * {
     min-height: 50px;
@@ -10,11 +8,9 @@ body {
     font-weight: bold;
 }
 
-
 .color1 {
     background-color: darkgray;
 }
-
 
 .container {
     margin-top: 25px;
@@ -39,9 +35,6 @@ body {
     box-shadow: 5px 10px black;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
 .btn-primary {
     background-color: Highlight;
     border: none;
@@ -71,208 +64,9 @@ body {
     cursor: pointer;
 }
 
->>>>>>> Stashed changes
-*{
-<div class="container container-fluid" >
-<div class="row" >
-<div class="col-5" >
-<div class="col color1" >
-<div class="tallH" >
-<h2 > Mortgage Loan Calculator</h2 >
-<p > Loan Amount: <input type="number" id="amountLoan" placeholder="Loan" input class="form-control form-control-sm" / > </p >
-<br / >
-<p > Term (Months): <input type="number" id="monthsLoan" placeholder="Term(Months)" input class="form-control form-control-sm" / > </p >
-<br / >
-<p > Interest Rate: <input type="number" min="2" max="7" id="rateLoan" placeholder="Interest" input class="form-control form-control-sm" / > </p >
-<br/ >
-<button class="form-control btn btn-primary" id="loan" onclick=" loanResults()" > Calculate</button >
-<br / >
-<button class="form-control btn btn-primary" id="loan" onclick=" loanResults()" > Calculate</button >
-<br / >
-<div class="col-7" >
-<div class="col color1" >
-<div class="tallH" >
-<h2 class="text-center" > Summary</h2 >
-<p > Monthly Payments: <output type="mPaymentsResult" id="mPayments" input class="form-control form control-xlg" placeholder="Your Monthly Payment" / > </p >
-<p > Total Principal: <output type="principal" id="princialPayment" input class="form-control form control-xlg" placeholder="Total Principal" / > </p >
-<p > Total Principal: <output type="principal" id="princialPayment" input class="form-control form control-xlg" placeholder="Total Principal" / > </p >
-<p > Total Cost: <output type="remainBalance" id="remainBalance" input class="form-control form-control-xlg" type="text" placeholder="Total Cost" / > </p >
-<button class=" form-control btn btn-warning" id="clear" onclick="reset()" > Clear</button >
-<div class=" container container-fluid" >
-<div class="row" >
-
-<table class="table table-hover table table-bordered table-striped table-dark mb-0" id="results" >
-
-<thead >
-
-<tr >
-
-<th scope="col" > Months</th >
-
-<th scope="col" > Payment</th >
-
-<th scope="col" > Principal</th >
-
-<th scope="col" > Interest</th >
-
-<th scope="col" > Total Interest</th >
-
-<th scope="col" > Balance</th >
-
-</tr >
-
-</thead >
-
-<tbody >
-
-
-
-<tr >
-
-<th scope="row" > 1</th >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-</tr >
-
-<tr >
-
-<th scope="row" > 2</th >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-</tr >
-
-<tr >
-
-<th scope="row" > 3</th >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-</tr >
-
-<tr >
-
-<th scope="row" > 4</th >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-</tr >
-
-<tr >
-
-<th scope="row" > 5</th >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-</tr >
-
-<tr >
-
-<th scope="row" > 6</th >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-</tr >
-
-<tr >
-
-<th scope="row" > 7</th >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-</tr >
-
-
-
-<tr >
-
-<th scope="row" > 8</th >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-<td > </td >
-
-</tr >
-
-</tbody >
-
-</table >
-}
-
-
-
-<<<<<<< Updated upstream
-</div >
-</div >
-=======
-/*optional table css*/
 #table-wrapper {
     position: relative;
 }
->>>>>>> Stashed changes
 
 #table-scroll {
     height: 150px;
@@ -280,17 +74,9 @@ body {
     margin-top: 20px;
 }
 
-<<<<<<< Updated upstream
-<br / >
-    }
-=======
->>>>>>> Stashed changes
-
-=======
 #table-wrapper table {
     width: 100%;
 }
->>>>>>> Stashed changes
 
     #table-wrapper table * {
         background: yellow;
@@ -306,15 +92,9 @@ body {
         border: 1px solid red;
     }
 
-
-
-<style >
 body {
     background-image: url('/Images/metal3.png');
 }
-
-
-
 
 * {
     min-height: 50px;
@@ -322,54 +102,36 @@ body {
     font-weight: bold;
 }
 
-
-
-
 .color1 {
     background-color: darkgray;
 }
-
-
-
 
 .container {
     margin-top: 25px;
     border: 10px black;
 }
 
-
-
 .col {
     outline: 1px solid black;
     box-shadow: 5px 10px;
 }
 
-
-
 .medH {
     min-height: 100px;
 }
 
-
-
 .tallH {
     min-height: 200px;
 }
-
-
 
 .table {
     outline: 1px solid black;
     box-shadow: 5px 10px black;
 }
 
-
 body {
     background-image: url('/Images/metal3.png');
 }
-
-
-
 
 * {
     min-height: 50px;
@@ -377,41 +139,27 @@ body {
     font-weight: bold;
 }
 
-
-
-
 .color1 {
     background-color: darkgray;
 }
-
-
-
 
 .container {
     margin-top: 25px;
     border: 10px black;
 }
 
-
-
 .col {
     outline: 1px solid black;
     box-shadow: 5px 10px;
 }
 
-
-
 .medH {
     min-height: 100px;
 }
 
-
-
 .tallH {
     min-height: 200px;
 }
-
-
 
 .table {
     outline: 1px solid black;
