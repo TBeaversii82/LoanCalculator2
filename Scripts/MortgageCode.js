@@ -1,5 +1,5 @@
 ﻿function loanResults() {
-  
+    
     //Where the input is stored
     let amount = document.getElementById("amountLoan").value;
     let months = document.getElementById("monthsLoan").value;
@@ -13,9 +13,8 @@
     //Compute monthly Payment
     let x = Math.pow(1 + calculateInterest, calculatePayments);
     let monthly = (principal * x * calculateInterest) / (x - 1);
+    let monthlyPayment = monthly.toFixed(2);
     
-    let monthlyPayment = monthly.toFixed(2);//tofixed is to set the decimal place two places
-
     //Compute Interest
     let totalInterest = (monthly * calculatePayments - principal).toFixed(2);
 
@@ -25,76 +24,46 @@
     //Compute Principal Payment
     let prinPayment = (totalPayment - monthlyPayment).toFixed(2);
 
-    //Balance
-    let rBalance = (amount - monthlyPayment).toFixed(2);
-
-    //Show Results
-    document.getElementById("mPayment").innerHTML = "$" + monthlyPayment;
+    //Show Summary Results
+    document.getElementById("mPayments").innerHTML = "$" + monthlyPayment;
     document.getElementById("iRPayments").innerHTML = "$" + totalInterest;
-    document.getElementById("Payments").innerHTML = "$" + totalPayment
-    document.getElementById("remainBalance").innerHTML = "$" + rBalance;
+    document.getElementById("Payments").innerHTML = "$" + totalPayment;
     document.getElementById("princialPayment").innerHTML = "$" + prinPayment;
-
-    //new array created 
-    var intRate = 0;
-    let balance = principal;
-    //itirates through the array that is set 
-    let array = new Array();//stores new array length
-    for (i = 0; i < months && balance > 0; i++) {
-        intRate += parseFloat(balance * (monthly));//adds interest to the result of the right side
-        array[i] = new Array();
-        array[i][0] = (i + 1).toFixed(0);//makes the array start from 1 to the length of the array. set to 0 so that the months are "1" instead of "1.0" etc
-        array[i][1] = parseFloat(monthlyPayment).toFixed(2);//monthly payment
-        array[i][2] = parseFloat(monthlyPayment - (balance * (monthly))).toFixed(2);//has balance and monthly values
-        array[i][3] = parseFloat(balance * monthly).toFixed(2);//principal
-        array[i][4] = parseFloat(intRate).toFixed(2);//interset rate
-        array[i][5] = parseFloat(balance - monthlyPayment).toFixed(2);//balance
-        if (monthlyPayment > balance) {
-            array[i][1] = array[i - 1][5];//col two
-            array[i][2] = array[i][1] - array[i][3]; //monthlyPayments - principal
-            array[i][5] = 0.00;//end of the table for balance equals 0
-        }
-        balance -= parseFloat(monthlyPayment).toFixed(2);//balance 
-
-
-    }
-    //takes the id and creates a new row in the table
-    var table = document.getElementById("results").getElementsByTagName("tbody")[0];
-    for (let j = 0; table.rows.length > 0; j++) {
-        table.deleteRow(-1);//deletes the last row in the table
-    }
-    //total months and output that need to be in the table
-    for (let i = 0; i < months; i++) {
-        let newRow = table.insertRow();
-        var myTable = `<td>${(array[i][0])}</td><td>${(array[i][1])}</td><td>${(array[i][2])}</td><td>${(array[i][3])}</td><td>${(array[i][4])}</td><td>${(array[i][5])}</td>`;
-        newRow.innerHTML = myTable;
-    }
-    return;
-}
-
-
-
     
-    //console.log(amount, months, interest);
-    //return;
-
-
-
-
-
-
-
-
-
-//function summary() {
-
-//    let amount = document.getElementById("amountLoan").value;
-//    let months = document.getElementById("monthsLoan").value;
-//    let interest = document.getElementById("rateLoan").value;
-
-//    console.log(amount, months, interest);
-//}
-
+    //New array created 
+    let intRate = 0;
+    let loanBalance = totalPayment;
+    let newPrincipal = principal;
+    let newInterestAmount = 0;
+    //Iterates and stores the array 
+    let array = new Array();
+    for (let i = 0; i < months && totalPayment > 0; i++) {
+        newInterestAmount = calculateInterest * newPrincipal;
+        newPrincipal = newPrincipal - (monthlyPayment - newInterestAmount);
+        loanBalance -= monthly;
+        intRate += newInterestAmount;
+        array[i] = new Array();
+        array[i][0] = (i + 1).toFixed(0);//Months
+        array[i][1] = parseFloat(monthly).toFixed(2);//Monthly payment
+        array[i][2] = i == months - 1 ? 0.00 : newPrincipal.toFixed(2);//Principal balance
+        array[i][3] = i == months - 1 ? 0.00 : newInterestAmount.toFixed(2);//Interest
+        array[i][4] = parseFloat(intRate).toFixed(2);//Accrued interest
+        array[i][5] = i == months - 1 ? 0.00 : parseFloat(loanBalance).toFixed(2);//Total balance
+    }
+    //Table
+    let table = document.getElementById("results").getElementsByTagName("tbody")[0];
+    for (let j = 0; table.rows.length > 0; j++) {
+        table.deleteRow(-1);//Deletes the last row in the table
+    }
+    //Outputs table to HTML
+    for (let i = 0; i < months; i++) {
+        let row = table.insertRow();
+        var loanTable = `<td>${(array[i][0])}</td><td>${(array[i][1])}</td><td>${(array[i][2])}</td><td>${(array[i][3])}</td><td>${(array[i][4])}</td><td>${(array[i][5])}</td>`;
+        row.innerHTML = loanTable;  
+    }
+    return; 
+}
+//Clear button function
 function reset() {
     document.getElementById("amountLoan").value = "";
     document.getElementById("monthsLoan").value = "";
