@@ -73,9 +73,11 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\LoanCalculatorStyle.css" />
+    <Content Include="Calculator2.css" />
+    <Content Include="Images\Calculator2-bg.png" />
     <Content Include="Images\CoderTeamReadme1.png" />
     <Content Include="Images\metal3.png" />
+    <Content Include="Images\SC Logo.png" />
     <Content Include="Index.html" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
