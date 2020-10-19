@@ -36,7 +36,7 @@ function loanResults() {
     document.getElementById("mPayments").innerHTML = "$" + monthlyPayment;
     document.getElementById("iRPayments").innerHTML = "$" + totalInterest;
     document.getElementById("Payments").innerHTML = "$" + totalPayment
-    document.getElementById("remainBalance").innerHTML = "$" + rBalance;
+    //document.getElementById("remainBalance").innerHTML = "$" + rBalance;
     document.getElementById("princialPayment").innerHTML = "$" + prinPayment;
 
     //new array created 
