@@ -29,7 +29,7 @@
     let rBalance = (amount - monthlyPayment).toFixed(2);
 
     //Show Results
-    document.getElementById("mPayments").innerHTML = "$" + monthlyPayment;
+    document.getElementById("mPayment").innerHTML = "$" + monthlyPayment;
     document.getElementById("iRPayments").innerHTML = "$" + totalInterest;
     document.getElementById("Payments").innerHTML = "$" + totalPayment
     document.getElementById("remainBalance").innerHTML = "$" + rBalance;
