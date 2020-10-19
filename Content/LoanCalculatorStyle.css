@@ -363,4 +363,57 @@ body {
     box-shadow: 5px 10px black;
 }
 
-</style >
+
+body {
+    background-image: url('/Images/metal3.png');
+}
+
+
+
+
+* {
+    min-height: 50px;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+
+
+.color1 {
+    background-color: darkgray;
+}
+
+
+
+
+.container {
+    margin-top: 25px;
+    border: 10px black;
+}
+
+
+
+.col {
+    outline: 1px solid black;
+    box-shadow: 5px 10px;
+}
+
+
+
+.medH {
+    min-height: 100px;
+}
+
+
+
+.tallH {
+    min-height: 200px;
+}
+
+
+
+.table {
+    outline: 1px solid black;
+    box-shadow: 5px 10px black;
+}

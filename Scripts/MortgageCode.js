@@ -1,6 +1,4 @@
-﻿
-
-function loanResults() {
+﻿function loanResults() {
     
     //Where the input is stored
     let amount = document.getElementById("amountLoan").value;
@@ -53,20 +51,15 @@ function loanResults() {
         loanBalance -= monthly;
         intRate += newInterestAmount;//adds interest to the result of the right side
         array[i] = new Array();
-        array[i][0] = (i + 1).toFixed(0);//month makes the array start from 1 to the length of the array. set to 0 so that the months are "1" instead of "1.0" etc
+        array[i][0] = (i + 1).toFixed(0);
         array[i][1] = parseFloat(monthly).toFixed(2);//monthly payment
-        //array[i][2] = parseFloat(months - (loanBalance * monthlyPayment)).toFixed(2);//has balance and monthly values
+        
         array[i][2] = i == months - 1 ? 0.00 : newPrincipal.toFixed(2);//has balance and monthly values
-        //array[i][3] = parseFloat(loanBalance * monthlyPayment).toFixed(2);//interset rate
+       
         array[i][3] = i == months - 1 ? 0.00 : newInterestAmount.toFixed(2);//interset rate
         array[i][4] = parseFloat(intRate).toFixed(2);// total interset rate
         array[i][5] = i == months - 1 ? 0.00 : parseFloat(loanBalance).toFixed(2);//balance
-        //if (months > loanBalance) {
-        //    array[i][1] = array[i - 1][5];//col two
-        //    array[i][2] = array[i][1] - array[i][3]; //monthlyPayments - principal
-        //    array[i][5] = 0.00;//end of the table for balance equals 0
-        //}
-        //loanBalance -= parseFloat(monthlyPayment).toFixed(2);//balance 
+        
 
 
     }
@@ -87,8 +80,6 @@ function loanResults() {
     return;
     
 }
-
-
 //Clear button function
 function reset() {
     document.getElementById("amountLoan").value = "";
