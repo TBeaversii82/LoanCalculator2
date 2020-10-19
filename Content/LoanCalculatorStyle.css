@@ -40,6 +40,38 @@ body {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+.btn-primary {
+    background-color: Highlight;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.btn-warning {
+    background-color: yellow;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+>>>>>>> Stashed changes
 *{
 <div class="container container-fluid" >
 <div class="row" >
@@ -47,38 +79,25 @@ body {
 <div class="col color1" >
 <div class="tallH" >
 <h2 > Mortgage Loan Calculator</h2 >
+<p > Loan Amount: <input type="number" id="amountLoan" placeholder="Loan" input class="form-control form-control-sm" / > </p >
 <br / >
-<input class="form-control form-control-sm" type="text" placeholder="Loan Amount" >
+<p > Term (Months): <input type="number" id="monthsLoan" placeholder="Term(Months)" input class="form-control form-control-sm" / > </p >
 <br / >
-<input class="form-control form-control-sm" type="text" placeholder="Term(Months)" >
+<p > Interest Rate: <input type="number" min="2" max="7" id="rateLoan" placeholder="Interest" input class="form-control form-control-sm" / > </p >
+<br/ >
+<button class="form-control btn btn-primary" id="loan" onclick=" loanResults()" > Calculate</button >
 <br / >
-<input class="form-control form-control-sm" type="text" placeholder="Intrest Rate" >
+<button class="form-control btn btn-primary" id="loan" onclick=" loanResults()" > Calculate</button >
 <br / >
-<button type="button" class="form-control btn-primary" > Calculate</button >
-<br / >
-</div >
-</div >
-</div >
 <div class="col-7" >
 <div class="col color1" >
 <div class="tallH" >
-<br / >
-<input class="form-control form-control-xlg" type="text" placeholder="Your Monthly Payments" >
-<br / >
-<input class="form-control form-control-xlg" type="text" placeholder="Total Principal" >
-<br / >
-<input class="form-control form-control-xlg" type="text" placeholder="Total Intrest" >
-<br / >
-<input class="form-control form-control-xlg" type="text" placeholder="Total Cost" >
-<br / >
-<button type="button" class="form-control btn-warning" > Clear</button >
-<br / >
-</div >
-</div >
-</div >
-</div >
-</div >
-<br / >
+<h2 class="text-center" > Summary</h2 >
+<p > Monthly Payments: <output type="mPaymentsResult" id="mPayments" input class="form-control form control-xlg" placeholder="Your Monthly Payment" / > </p >
+<p > Total Principal: <output type="principal" id="princialPayment" input class="form-control form control-xlg" placeholder="Total Principal" / > </p >
+<p > Total Principal: <output type="principal" id="princialPayment" input class="form-control form control-xlg" placeholder="Total Principal" / > </p >
+<p > Total Cost: <output type="remainBalance" id="remainBalance" input class="form-control form-control-xlg" type="text" placeholder="Total Cost" / > </p >
+<button class=" form-control btn btn-warning" id="clear" onclick="reset()" > Clear</button >
 <div class=" container container-fluid" >
 <div class="row" >
 
@@ -241,9 +260,11 @@ body {
 </tbody >
 
 </table >
+}
 
 
 
+<<<<<<< Updated upstream
 </div >
 </div >
 =======
@@ -262,6 +283,8 @@ body {
 <<<<<<< Updated upstream
 <br / >
     }
+=======
+>>>>>>> Stashed changes
 
 =======
 #table-wrapper table {
