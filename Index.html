@@ -12,179 +12,201 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
     <link href="Content/LoanCalculatorStyle.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-image: url('/Images/metal3.png');
+        }
+
+
+
+
+        * {
+            min-height: 50px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+
+
+
+        .color1 {
+            background-color: darkgray;
+        }
+
+
+
+
+        .container {
+            margin-top: 25px;
+            border: 10px black;
+        }
+
+
+
+        .col {
+            outline: 1px solid black;
+            box-shadow: 5px 10px;
+        }
+
+
+
+        .medH {
+            min-height: 100px;
+        }
+
+
+
+        .tallH {
+            min-height: 200px;
+        }
+
+
+
+        .table {
+            outline: 1px solid black;
+            box-shadow: 5px 10px black;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-        <div class="container ">
-            <div class="navbar-brand">Mortgage App</div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!--Header-->
-    <div class="container">
-        <div class="row">
-            <div>
-                <h1>Mortgage Loan Calculator</h1>
-                <p>Enter the sum you wish to loan and the estimated payments for your loan total, interest and monthly payments will be calculated.</p>
-            </div>
-        </div>
-        <br />
-        <hr />
-        <br />
-        <!--User Input-->
-        <div class="row text-reset">
-            <div class="col">
-                <p>Loan Amount: <input type="number" id="amountLoan" placeholder="Loan" /></p>
-            </div>
-            <div class="col">
-                <p>Term (Months): <input type="number" id="monthsLoan" placeholder="Months" /></p>
-            </div>
-            <div class="col">
-                <p>Interest Rate: <input type="number" min="2" max="8" id="rateLoan" placeholder="Interest" /></p>
-            </div>
-        </div>
-        <!--Calculate Button-->
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-primary" id="loan" onclick=" loanResults()">Calculate</button>
-            </div>
-            <!--Reset Button-->
-            <div class="col">
-                <button class="btn btn-warning" id="clear" onclick="reset()">Clear</button>
-            </div>
-        </div>
-        <hr />
-        <!--Results-->
-        <div class="row">
-            <div class="col">
-                <h4>Calculated Results</h4>
+        <div class="container container-fluid">
+            <div class="row">
+                <div class="col-5">
+                    <div class="col color1">
+                        <div class="tallH">
+                            <h2>Mortgage Loan Calculator</h2>
+                            <!--<input class="form-control form-control-sm" type="number" id="amountLoan" placeholder="Loan Amount">-->
+                            <p>Loan Amount: <input type="number" id="amountLoan" placeholder="Loan" input class="form-control form-control-sm" /></p>
+                            <br />
+                            <!--<input class="form-control form-control-sm" type="number" id="monthsLoan" placeholder="Term(Months)">-->
+                            <p>Term (Months): <input type="number" id="monthsLoan" placeholder="Term(Months)" input class="form-control form-control-sm" /></p>
+                            <br />
+                            <!--<input class="form-control form-control-sm" type="number" id="rateLoan" placeholder="Intrest Rate">-->
+                            <p>Interest Rate: <input type="number" min="2" max="7" id="rateLoan" placeholder="Interest" input class="form-control form-control-sm" /></p>
+                            <!--<button class="form-control btn-primary" id="loan" onclick=" loanResults()">Calculate</button>-->
+                            <button class="form-control btn btn-primary" id="loan" onclick=" loanResults()">Calculate</button>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="col color1">
+                        <div class="tallH">
+                            <br />
+                            <!--<input class="form-control form-control-xlg" type="text" id="mPayments" placeholder="Your Monthly Payments">-->
+                            <p id="mPayments" input class="form-control form control-xlg" placeholder-="Your Monthly Payment"> Monthly Payments: </p>
+                            <br />
+                            <!--<input class="form-control form-control-xlg" type="text" placeholder="Total Principal">-->
+                            <p id="princialPayment" input class="form-control form control-xlg" placeholder="Total Principal"> Total Principal: </p>
+                            <br />
+                            <!--<input class="form-control form-control-xlg" type="text" placeholder="Total Intrest">-->
+                            <p id="iRPayments" input class="form-control form-control-xlg" type="text" placeholder="Total Intrest"> Total Intrest Paid </p>
+                            <br />
+                            <!--<input class="form-control form-control-xlg" type="text" placeholder="Total Cost">-->
+                            <p id="remainBalance" input class="form-control form-control-xlg" type="text" placeholder="Total Cost"> Total Cost: </p>
+                            <br />
+                            <!--<button type="button" class="form-control btn-warning" id="clear" onclick="rest()">Clear</button>-->
+                            <button class=" form-control btn btn-warning" id="clear" onclick="reset()">Clear</button>
+                            <br />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <br />
-        <br />
-        <div class="row">
-            <div class="col">
-                <h5>The total amount you need to pay: </h5>
-                <p id="Payments">Total Amount: </p>
-            </div>
-            <div class="col">
-                <h5>Your monthly payments:</h5>
-                <p id="mPayments">Monthly Payments: </p>
-            </div>
-            <div class="col">
-                <h5>Your interest rate amount:</h5>
-                <p id="iRPayments">Interest Rate Payments: </p>
-            </div>
-            <div class="col">
-                <h5>Your Balance amount:</h5>
-                <p id="remainBalance">Balance Here: </p>
-            </div>
-            <div class="col">
-                <h5>Your Principal amount:</h5>
-                <p id="princialPayment">Principal  Here: </p>
+        <div class=" container container-fluid">
+            <div class="row">
+                <table class="table table-hover table table-bordered table-striped table-dark mb-0" id="results">
+                     <thead>
+                           <tr>
+                            <th scope="col">Months</th>
+                            <th scope="col">Payment</th>
+                            <th scope="col">Principal</th>
+                            <th scope="col">Interest</th>
+                            <th scope="col">Total Interest</th>
+                            <th scope="col">Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </div>
-    <!--Results for table-->
-    <div>
-        <table class="table table-bordered table-striped mb-0 table-hover" id="results">
-                <thead>
-                    <tr class="hover">
-                        <th scope="col">Months</th>
-                        <th scope="col">Payment</th>
-                        <th scope="col">Principal</th>
-                        <th scope="col">Interest</th>
-                        <th scope="col">Total Interest</th>
-                        <th scope="col">Balance</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-        </table>
-    </div>
+        <br />
 
-
-<<<<<<< Updated upstream
-
-    <!--Bootstrap-->
-    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="Scripts/bootstrap.bundle.min.js"></script>
-    <script src="Scripts/bootstrap.bundle.js"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="/Scripts/MortgageCode.js"></script>
-=======
+        <!--Bootstrap-->
+        <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="Scripts/bootstrap.bundle.min.js"></script>
+        <script src="Scripts/bootstrap.bundle.js"></script>
+        <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="/Scripts/MortgageCode.js"></script>
+        =======
         <!--Bootstrap-->
         <!--<script src="Scripts/bootstrap.bundle.min.js"></script>
         <script src="Scripts/bootstrap.bundle.js"></script>
@@ -192,7 +214,7 @@
         <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
         <script src="/Scripts/MortgageCode.js"></script>
->>>>>>> Stashed changes
+        >>>>>>> Stashed changes
 
-</body>
+    </body>
 </html>
