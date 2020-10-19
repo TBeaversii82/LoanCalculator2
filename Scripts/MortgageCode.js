@@ -32,13 +32,13 @@ function loanResults() {
     ////Balance
     let rBalance = (amount - monthlyPayment).toFixed(2);
 
-    //Show Results
+    //Show Summary Results
     document.getElementById("mPayments").innerHTML = "$" + monthlyPayment;
     document.getElementById("iRPayments").innerHTML = "$" + totalInterest;
     document.getElementById("Payments").innerHTML = "$" + totalPayment
     //document.getElementById("remainBalance").innerHTML = "$" + rBalance;
     document.getElementById("princialPayment").innerHTML = "$" + prinPayment;
-
+    
     //new array created 
     let intRate = 0;
     let loanBalance = parseFloat(amount);
@@ -51,7 +51,7 @@ function loanResults() {
         array[i][1] = parseFloat(months).toFixed(2);//monthly payment
         array[i][2] = parseFloat(months - (loanBalance * monthlyPayment)).toFixed(2);//has balance and monthly values
         array[i][3] = parseFloat(loanBalance * monthlyPayment).toFixed(2);//interset rate
-        array[i][4] = parseFloat(intRate).toFixed(2);//interset rate
+        array[i][4] = parseFloat(intRate).toFixed(2);// total interset rate
         array[i][5] = parseFloat(loanBalance - months).toFixed(2);//balance
         if (months > loanBalance) {
             array[i][1] = array[i - 1][5];//col two
