@@ -13,6 +13,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
     <link href="Content/LoanCalculatorStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 
 
 </head>
@@ -89,7 +90,7 @@
     </div>
     <!--Table Results-->
     <div class="container overflow-auto">
-        <table class="table table-hover table table-bordered table-striped table-dark mb-0" id="results">
+        <table class="DataTable table-hover table table-bordered table-striped table-dark mb-0" id="results">
             <thead>
                 <tr>
                     <th scope="col">Months</th>
@@ -177,6 +178,17 @@
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
     <script src="/Scripts/MortgageCode.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('body').DataTable();
+        });
+    </script>
+
+    <footer>
+        Loan Calculator OJT 2020
+    </footer>
 
 </body>
 </html>
